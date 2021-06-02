@@ -73,21 +73,38 @@ const linkPortfolio = document.querySelectorAll('.portfolio__item')
 
 function activePortfolio(){
     if(linkPortfolio){
-        linkPortfolio.forEach(L => l.classList.remove('active-portfolio'))
+        linkPortfolio.forEach(l => l.classList.remove('active-portfolio'))
         this.classList.add('active-portfolio')
     }
 }
-linkPortfolio.forEach(L => l.addEventListener('click', activePortfolio))
+linkPortfolio.forEach(l => l.addEventListener('click', activePortfolio))
 
 /* ===== SWIPER CAROUSEL =====*/
-const mySwiper = new Swiper('.swiper-container', {
+const mySwiper = new Swiper('.testimonial-container', {
     spaceBetween: 16,
     loop: true,
     grabCursor: true,
   
     pagination: {
       el: '.swiper-pagination',
+      clickable: true,
     },
+    breakpoints:{
+        640:{
+           slidesPerView: 2, 
+        },
+        1024:{
+            slidesPerView: 3,
+
+        },
+    }
    
   });
 /* ===== GSAP ANIMATION =====*/
+gsap.from('.home__img', {opacity: 0, duration: 2, delay:.5, x:60})
+gsap.from('.home__data', {opacity: 0, duration: 2, delay:.8, x:25})
+gsap.from('.home__greeting .home__name, .home__profession, .home__button', {opacity: 0, duration: 2, delay:1, ease:'expo.out', stagger:.2})
+
+gsap.from('.nav__logo, .nav__toggle', {opacity: 0, duration: 2, delay:1.5, ease:'expo.out', stagger:.2})
+gsap.from('.nav__item', {opacity: 0, duration: 2, delay:1.8, ease:'expo.out', stagger:.2})
+gsap.from('.home__social-icon', {opacity: 0, duration: 2, delay:2.3, ease:'expo.out', stagger:.2})

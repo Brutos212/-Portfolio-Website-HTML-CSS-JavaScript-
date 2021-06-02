@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+               <!-- ===== SWIPER CSS =====    -->
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
     
-    <link rel="stylesheet" href="/css/style.css">
-    
+    <!-- ===== BOX ICONS ====== -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="/css/style.css">
     
     <title>Portifolio</title>
 </head>
@@ -31,7 +34,7 @@
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
                         <li class="nav__item"><a href="#portfolio" class="nav__link">Portifolio</a></li>
-                        <li class="nav__item"><a href="#content" class="nav__link">Contactme</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact me</a></li>
                     </ul>
                 </div>
                 <div class="nav__toggle" id="nav-toggle">
@@ -41,6 +44,8 @@
         </header>
 
     <main class="1-main">
+
+
         <!-- HOME -->
         <section class="home" id="home">
             <div class="home__container bd-container bd-grid">
@@ -48,7 +53,9 @@
                     <span class="home__greeting"> Hello, My Name is </span>
                     <h1 class="home__name">Fabio Santos</h1>
                     <span class="home__profession">Full Stack Web Developer</span>
-                    <a download="" href="/pdf/Fabio-Santos-Cv.pdf" class="button button-lig">Download Cv</a>
+                    <gsap.from('.home__greeting .home__name, .home__profession, .home__button {opacity: 0, duration: 2, delay:.5, x:60})></gsap.from>
+                    
+                    <a download="" href="/pdf/Fabio-Santos-Cv.pdf" class="button button-lig ">Download Cv</a>
                 </div>
 
                 <div class="home__social">
@@ -351,6 +358,7 @@
             <h2 class="section-title">Testimonial</h2>
 
             <div class="testimonial__container swiper-container">
+
                 <div class="swiper-wrapper">
                     <div class="testimonial__content swiper-slider">
                         <img src="/img/testimonial1.jpg" alt="" class="portfolio__img">
@@ -359,29 +367,97 @@
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptatibus!</p>
                     </div>
 
-                    <div class="testimonial__content" >
+                    <div class="testimonial__content swiper-slider" >
                         <img src="/img/testimonial2.jpg" alt="" class="portfolio__img">
                         <h3 class="testimonial__title">Nik2 Name</h3>
                         <span class="testimonial__client">Client</span>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptatibus!</p>
                     </div>
 
-                    <div class="testimonial__content">
+                    <div class="testimonial__content swiper-slider">
                         <img src="/img/testimonial3.jpg" alt="" class="portfolio__img">
                         <h3 class="testimonial__title">Nik3 Name</h3>
                         <span class="testimonial__client">Client</span>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptatibus!</p>
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
 
         </section>
 
         <!-- CONTACTME -->
 
+        <section class="testimonial section bd-container" id="contact">
+            <span class="section-subtitle">For project</span>
+            <h2 class="section-title"> Contact Me</h2>
+
+            <div class="contact_container bd-grid">
+                <div class="contact__content bd-grid">
+                    <div class="contact__box">
+                        <i class='bx bx-home contact__icon'></i>
+                        <h3 class="contact__title">Location</h3>
+                        <span class="contact__description">#123 Lima -Peru</span>
+                    </div>
+
+                    <div class="contact__box">
+                        <i class='bx bx-phone contact__icon'></i>
+                        <h3 class="contact__title">Phone</h3>
+                        <span class="contact__description">999-777-888</span>
+                    </div>
+                    
+                    <div class="contact__box">
+                        <i class='bx bx-envelope contact__icon'></i>
+                        <h3 class="contact__title">Gmail</h3>
+                        <span class="contact__description">brutos212@gmail.com</span>
+                    </div>
+
+                    <div class="contact__box">
+                        <i class='bx bx-chat contact__icon'></i>
+                        <h3 class="contact__title">Chat</h3>
+                        <div>
+                          <a href="" class="contact__social"> <i class='bx bxl-whatsapp-square'></i></a>
+                          <a href="" class="contact__social"> <i class='bx bxl-telegram'></i></a>
+                          <a href="" class="contact__social"> <i class='bx bxl-messenger'></i></a>  
+                        </div>
+                    </div>
+                </div>
+
+                <form action="" class="contact__form">
+                    <div class="contact__inputs">
+                        <input type="text" placeholder="Name" class="contact__input">
+                        <input type="email" placeholder="Email" class="contact__input">
+                    </div>
+
+                    <div class="contact__inputs">
+                        <input type="text" placeholder="Project" class="contact__input">
+                        <input type="email" placeholder="Number" class="contact__input">
+                    </div>
+
+                    <textarea name="" id="" cols="0" rows="7" placeholder="Message" class="contact__input"></textarea>
+
+                    <input type="submit" value="Send Message" class="button contact__button">
+                </form>
+            </div>
+        </section>
+
     </main>
 
         <!-- FOOTER -->
+
+        <footer class="footer">
+            <div class="footer__container bd-container">
+                <h1 class="footer__title">Fabio Santos</h1>
+                <p class="footer__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, eveniet!</p>
+            </div>
+
+            <div class="footer__social">
+                <a href="#" class="footer__link"><i class='bx bxl-linkedin'></i></a>
+                <a href="#" class="footer__link"><i class='bx bxl-github'></i></a>
+                <a href="#" class="footer__link"><i class='bx bxl-dribbble'></i></a>
+            </div>
+            <p class="footer__copy"> &#169; 2021 Bedimcode. All right reserved</p>
+        </footer>
 
         <!-- MIXITUP FILTER -->        
         <script src="/js/mixitup.min.js"></script>
@@ -390,7 +466,7 @@
         <script src="/js/swiper-bundle.min.js"></script>
 
         <!-- GSAP -->
-        <script src=""></script>
+        <script src="/js/gsap.min.js"></script>
         
         <!-- MAIN JS -->
         <script src="/js/main.js"></script>
